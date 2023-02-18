@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Lora:ital@0;1&family=Poppins:wght@300;400&family=Unbounded&display=swap');
 
+:root {
+    --grey: #343a40;
+}
 
 html, body {
     width: 100%;
@@ -12,24 +15,46 @@ body {
     display: flex;
 }
 
+.dark_toggle {
+    position: relative;
+    bottom: 21rem;
+    left: 1rem;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.dark_toggle:hover {
+    background-color: black;
+    color: white;
+}
+
+
 .sign-in {
    display: flex;
    align-items: center;
    justify-content: center;
     border: solid;
     width: 50%;
+    margin: 0;
 }
 
 form {
     display: grid;
     gap: 40px;
     text-align: center;
+
+    place-items: center;
+    width: 80%;
+    height: 40%;
 }
 
 .sign-in_image {
     background-size: cover;
     width: 50%;
-    background-image: url("https://i.pinimg.com/564x/dd/87/e1/dd87e1d30b46fdc8ba3b379bc80cfd18.jpg");
+    background-image: url("https://i.pinimg.com/originals/15/b8/6c/15b86c9d72bf04495a4beffe1baa34cd.gif");
 }
 
 button {
@@ -37,7 +62,12 @@ button {
     color: white;
     border-radius: 8px;
     cursor: pointer;
+    transition: 0.5s;
+    width: 60%;
+    position: relative;
 }
+
+
 
 @media (max-width: 580px) {
     .sign-in_image {
@@ -57,6 +87,32 @@ button {
         align-items: center;
         justify-content: center;
         background-size: cover;
-        background-image: url("https://i.pinimg.com/564x/dd/87/e1/dd87e1d30b46fdc8ba3b379bc80cfd18.jpg");
+        background-image: url("https://i.pinimg.com/originals/15/b8/6c/15b86c9d72bf04495a4beffe1baa34cd.gif");
     }
+    form {
+        width: 100%;
+        height: 100%;
+    }
+    .dark_toggle {
+        position: relative;
+        bottom: 9rem;
+        left: 18rem;
+        font-size: 20px;
+    }
+}
+
+.dark_form {
+    background-color: var(--grey);
+    color: white;
+}
+
+.dark {
+    background-color: var(--grey);
+    color: white;
+}
+
+.dark_input {
+    border-color: white;
+    background-color: var(--grey);
+    color: white;
 }
